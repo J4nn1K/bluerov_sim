@@ -805,7 +805,7 @@
             <parent>base_link</parent>
         </joint>
 
-        <link name="ov9281_00_link">
+        <link name="vertical_camera_link">
             <pose>0.3 0 -0.05 0 1.5708 0</pose>
             <inertial>
                 <mass>1e-10</mass>
@@ -819,8 +819,8 @@
                 </inertia>
             </inertial>
 
-            <sensor name="ov9281_00" type="camera">
-                <camera name="ov9281_00">
+            <sensor name="vertical_camera" type="camera">
+                <camera name="vertical_camera">
                     <horizontal_fov>2.094</horizontal_fov>
                     <image>
                         <width>640</width>
@@ -856,7 +856,7 @@
                 <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
                     <alwaysOn>1</alwaysOn>
                     <updateRate>0.0</updateRate>
-                    <cameraName>ov9281_00</cameraName>
+                    <cameraName>vertical_camera</cameraName>
                     <imageTopicName>image_raw</imageTopicName>
                     <distortionK1>0.0</distortionK1>
                     <distortionK2>0.0</distortionK2>
@@ -866,8 +866,8 @@
             </sensor>
         </link>
 
-        <joint type="fixed" name="ov9281_00_joint">
-            <child>ov9281_00_link</child>
+        <joint type="fixed" name="vertical_camera_joint">
+            <child>vertical_camera_link</child>
             <parent>base_link</parent>
         </joint>
 
