@@ -9,7 +9,7 @@
     <arg name="camera" default="false" />
 
     <include file="$(find bluerov_sim)/launch/gazebo_tags.launch" />
-
+    
     <!-- spawn BlueROV model -->
     <include file="$(find bluerov_sim)/launch/spawn_vehicle.launch">
         <arg name="camera" value="$(arg camera)" />

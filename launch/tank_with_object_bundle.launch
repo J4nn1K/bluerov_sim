@@ -1,0 +1,17 @@
+<launch>
+
+    <include file="$(find bluerov_sim)/launch/gazebo_base.launch"/>
+    <node name="tank_spawner" output="screen" pkg="gazebo_ros" type="spawn_model" args="-sdf -file $(find bluerov_sim)/models/apriltag_tank_with_object_bundle/model.sdf -model apriltag_tank_with_object_bundle" />
+   
+    <!-- spawn BlueROV model -->
+    <!-- <include file="$(find bluerov_sim)/launch/spawn_vehicle.launch">
+        <arg name="camera" value="$(arg camera)" />
+        <arg name="x" value="$(arg x)" />
+        <arg name="y" value="$(arg y)" />
+        <arg name="z" value="$(arg z)" />
+        <arg name="R" default="$(arg R)" />
+        <arg name="P" default="$(arg P)" />
+        <arg name="Y" default="$(arg Y)" />
+    </include> -->
+    
+</launch>

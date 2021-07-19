@@ -19,6 +19,7 @@
     <depend>std_msgs</depend>
     <depend>apriltag_ros</depend>
     <depend>geometry_msgs</depend>
+    <depend>joy</depend>
  
     <!-- <exec_depend>gazebo_ros</exec_depend> -->
 
