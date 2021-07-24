@@ -5,14 +5,14 @@
 
         <link name="base_link">
             <inertial>
-                <mass>11</mass>
+                <mass>12</mass>
                 <inertia>
-                    <ixx>0.1</ixx>
+                    <ixx>0.16</ixx>
                     <ixy>0</ixy>
                     <ixz>0</ixz>
-                    <iyy>0.1</iyy>
+                    <iyy>0.16</iyy>
                     <iyz>0</iyz>
-                    <izz>0.1</izz>
+                    <izz>0.16</izz>
                 </inertia>
             </inertial>
 
@@ -447,15 +447,17 @@
         <plugin name="uuv_plugin" filename="libgazebo_uuv_plugin.so">
             <robotNamespace />
             <baseLinkName>base_link</baseLinkName>
-            <addedMassLinear>0 0 0</addedMassLinear>
-            <addedMassAngular>0.0 0.0 0.0</addedMassAngular>
-            <dampingLinear>7 7 7</dampingLinear>
-            <dampingAngular>0.3 0.3 0.3</dampingAngular>
+            <!-- Parameters based on SI by Chu-Jou Wu (Master Thesis at Flinders University)-->
+            <addedMassLinear>5.5 12.7 14.57</addedMassLinear>
+            <addedMassAngular>0.12 0.12 0.12</addedMassAngular>
+            <dampingLinear>18.18 21.66 36.66</dampingLinear>
+            <dampingAngular>1.55 1.55 1.55</dampingAngular>
             <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
             <buoyancy>
                 <link_name>base_link</link_name>
                 <origin>0 0 0.01</origin>
-                <compensation>1.001</compensation>
+                <!-- W = 112.8N, B = 114.8N  -->
+                <compensation>1.01773</compensation>
                 <height_scale_limit>0.05</height_scale_limit>
             </buoyancy>
         </plugin>
