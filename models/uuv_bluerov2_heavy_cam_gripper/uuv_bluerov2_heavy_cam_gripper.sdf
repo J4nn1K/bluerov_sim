@@ -1,11 +1,11 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
-    <model name="BlueROV2 Heavy with Camera">
+    <model name="BlueROV2 Heavy with Camera and Gripper">
         <pose>0 0 0 0 0 0</pose>
 
         <link name="base_link">
             <inertial>
-                <mass>12</mass>
+                <mass>11.5</mass>
                 <inertia>
                     <ixx>0.16</ixx>
                     <ixy>0</ixy>
@@ -742,7 +742,7 @@
         </plugin>
 
         <link name="front_camera_link">
-            <pose>0.16 0 0.05 0 0.207 0</pose>
+            <pose>0.3 0 0.05 0 0 0</pose>
             <inertial>
                 <mass>1e-10</mass>
                 <inertia>
@@ -873,5 +873,35 @@
             <parent>base_link</parent>
         </joint>
 
+        <link name="gripper_link">
+            <pose>1 1 1 0 0 0</pose>
+            <inertial>
+                <pose>0 0 0 0 0 0</pose>
+                <inertia>
+                    <ixx>1e-06</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>1e-06</iyy>
+                    <iyz>0</iyz>
+                    <izz>1e-06</izz>
+                </inertia>
+                <mass>0.6</mass>
+            </inertial>
+            <visual name="visual">
+                <geometry>
+                    <box>
+                        <size>0.2 0.2 1.0</size>
+                    </box>
+                </geometry>
+                <material>
+                    <script>Gazebo/Purple</script>
+                </material>
+            </visual>
+        </link>
+
+        <joint type="fixed" name="gripper_joint">
+            <child>gripper_link</child>
+            <parent>base_link</parent>
+        </joint>
     </model>
 </sdf>

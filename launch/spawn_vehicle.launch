@@ -1,7 +1,7 @@
 <launch>
     <!-- Posix SITL environment launch script -->
     <!-- launchs PX4 SITL and spawns vehicle -->
-    <arg name="camera" default="false" />
+    <arg name="camera" default="true" />
     <!-- vehicle pose -->
     <arg name="x" default="0" />
     <arg name="y" default="0" />
