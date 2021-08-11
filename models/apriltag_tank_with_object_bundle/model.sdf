@@ -44,42 +44,42 @@
     <include>
       <name>tag_0</name>
       <uri>model://tag36_11_00000</uri>
-      <pose>0.687 3.35 -0.6 1.57079632679 -0.0 0.0</pose>
+      <pose>0.687 3.35 -0.478 1.57079632679 -0.0 0.0</pose>
     </include>
     <include>
       <name>tag_2</name>
       <uri>model://tag36_11_00002</uri>
-      <pose>0.8 3.35 -0.6 1.57079632679 -0.0 0.0</pose>
+      <pose>0.8 3.35 -0.478 1.57079632679 -0.0 0.0</pose>
     </include>
     <include>
       <name>tag_3</name>
       <uri>model://tag36_11_00003</uri>
-      <pose>0.913 3.35 -0.6 1.57079632679 -0.0 0.0</pose>
+      <pose>0.913 3.35 -0.478 1.57079632679 -0.0 0.0</pose>
     </include>
     <include>
       <name>tag_4</name>
       <uri>model://tag36_11_00004</uri>
-      <pose>0.687 3.35 -0.722 1.57079632679 -0.0 0.0</pose>
+      <pose>0.687 3.35 -0.6 1.57079632679 -0.0 0.0</pose>
     </include>
     <include>
       <name>tag_5</name>
       <uri>model://tag36_11_00005</uri>
-      <pose>0.913 3.35 -0.722 1.57079632679 -0.0 0.0</pose>
+      <pose>0.913 3.35 -0.6 1.57079632679 -0.0 0.0</pose>
     </include>
     <include>
       <name>tag_6</name>
       <uri>model://tag36_11_00006</uri>
-      <pose>0.687 3.35 -0.844 1.57079632679 -0.0 0.0</pose>
+      <pose>0.687 3.35 -0.722 1.57079632679 -0.0 0.0</pose>
     </include>
     <include>
       <name>tag_7</name>
       <uri>model://tag36_11_00007</uri>
-      <pose>0.8 3.35 -0.844 1.57079632679 -0.0 0.0</pose>
+      <pose>0.8 3.35 -0.722 1.57079632679 -0.0 0.0</pose>
     </include>
     <include>
       <name>tag_8</name>
       <uri>model://tag36_11_00008</uri>
-      <pose>0.913 3.35 -0.844 1.57079632679 -0.0 0.0</pose>
+      <pose>0.913 3.35 -0.722 1.57079632679 -0.0 0.0</pose>
     </include>
   </model>
 </sdf>
