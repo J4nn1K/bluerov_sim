@@ -57,7 +57,7 @@
             </axis>
         </joint>
 
-        <link name="range_sensor_link">
+        <!-- <link name="range_sensor_link">
             <pose>0.2 0 0.1 0 0 0</pose>
             <inertial>
                 <mass>0.001</mass>
@@ -70,9 +70,9 @@
                     <izz>1.0e-8</izz>
                 </inertia>
             </inertial>
-        </link>
+        </link> -->
 
-        <joint name="range_sensor_joint" type="revolute">
+        <!-- <joint name="range_sensor_joint" type="revolute">
             <child>range_sensor_link</child>
             <parent>base_link</parent>
             <axis>
@@ -82,7 +82,7 @@
                     <lower>0</lower>
                 </limit>
             </axis>
-        </joint>
+        </joint> -->
 
         <plugin name="pressure_plugin" filename="libgazebo_pressure_plugin.so">
             <robotNamespace />
@@ -90,7 +90,7 @@
             <noise>100.0</noise>
         </plugin>
 
-        <plugin name="range_sensor_plugin" filename="libgazebo_range_sensor_plugin.so">
+        <!-- <plugin name="range_sensor_plugin" filename="libgazebo_range_sensor_plugin.so">
             <robotNamespace />
             <pubRate>7.0</pubRate>
             <rangeNoiseStd>0.1</rangeNoiseStd>
@@ -99,7 +99,7 @@
             <dropProb>0.05</dropProb>
             <maxDetectionDist>4.0</maxDetectionDist>
             <distDropProbExponent>2.0</distDropProbExponent>
-        </plugin>
+        </plugin> -->
 
         <link name="thruster1">
             <pose>0.14 -0.10 0 0 1.570796 0.78539815</pose>
@@ -808,7 +808,7 @@
         </joint>
 
         <link name="vertical_camera_link">
-            <pose>0.3 0 -0.05 0 1.5708 0</pose>
+            <pose>0.15 0 -0.08 0 1.5708 0</pose>
             <inertial>
                 <mass>1e-10</mass>
                 <inertia>
