@@ -44,7 +44,7 @@
     <include>
       <name>Object</name>
       <uri>model://object_setup</uri>
-      <pose>0.85 0.2 -0.6 0 0 1.57</pose>
+      <pose>0.85 3.2 -0.6 0 0 -1.57</pose>
     </include>
   </model>
 </sdf>
