@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="Object">
+    <pose>0 0 0 0 0 0</pose>
+    <link name="object_link">
+      <visual name="object">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.03 0.1</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <static>true</static>
+    <include>
+      <name>tag_0</name>
+      <uri>model://tag36_11_00000</uri>
+      <pose>-0.1 -0.113 0.122 1.57 0 1.57</pose>
+    </include>
+    <include>
+      <name>tag_2</name>
+      <uri>model://tag36_11_00002</uri>
+      <pose>-0.1 0 0.122 1.57 0 1.57</pose>
+    </include>
+    <include>
+      <name>tag_3</name>
+      <uri>model://tag36_11_00003</uri>
+      <pose>-0.1 0.113 0.122 1.57 0 1.57</pose>
+    </include>
+    <include>
+      <name>tag_4</name>
+      <uri>model://tag36_11_00004</uri>
+      <pose>-0.1 -0.113 0 1.57 0 1.57</pose>
+    </include>
+    <include>
+      <name>tag_5</name>
+      <uri>model://tag36_11_00005</uri>
+      <pose>-0.1 0.113 0 1.57 0 1.57</pose>
+    </include>
+    <include>
+      <name>tag_6</name>
+      <uri>model://tag36_11_00006</uri>
+      <pose>-0.1 -0.113 -0.122 1.57 0 1.57</pose>
+    </include>
+    <include>
+      <name>tag_7</name>
+      <uri>model://tag36_11_00007</uri>
+      <pose>-0.1 0 -0.122 1.57 0 1.57</pose>
+    </include>
+    <include>
+      <name>tag_8</name>
+      <uri>model://tag36_11_00008</uri>
+      <pose>-0.1 0.113 -0.122 1.57 0 1.57</pose>
+    </include>
+    <plugin name="ground_truth" filename="libgazebo_ros_p3d.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>30.0</updateRate>
+      <bodyName>object_link</bodyName>
+      <topicName>object/ground_truth/state</topicName>
+      <gaussianNoise>0.0</gaussianNoise>
+      <frameName>map</frameName>
+      <xyzOffsets>0 0 0</xyzOffsets>
+      <rpyOffsets>0 0 0</rpyOffsets>
+    </plugin>
+  </model>
+</sdf>

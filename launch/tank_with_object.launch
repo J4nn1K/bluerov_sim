@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find bluerov_sim)/launch/gazebo_base.launch"/>
+    <node name="tank_spawner" output="screen" pkg="gazebo_ros" type="spawn_model" args="-sdf -file $(find bluerov_sim)/models/tank_with_object/model.sdf -model tank_with_object" />    
+</launch>
