@@ -735,7 +735,7 @@
 
         <plugin name="ground_truth" filename="libgazebo_ros_p3d.so">
             <alwaysOn>true</alwaysOn>
-            <updateRate>30.0</updateRate>
+            <updateRate>30</updateRate>
             <bodyName>base_link</bodyName>
             <topicName>ground_truth/state</topicName>
             <gaussianNoise>0.0</gaussianNoise>
