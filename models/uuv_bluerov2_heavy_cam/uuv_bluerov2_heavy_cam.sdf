@@ -31,6 +31,46 @@
 
         </link>
 
+        <link name="gripper">
+            <pose>0.13 -0.08 -0.07 0 0 -1.26</pose>
+            <inertial>
+                <mass>1e-10</mass>
+                <inertia>
+                    <ixx>1e-06</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>1e-06</iyy>
+                    <iyz>0</iyz>
+                    <izz>1e-06</izz>
+                </inertia>
+            </inertial>
+            <visual name="gripper_visual">
+                <geometry>
+                    <mesh>
+                        <scale>1 1 1</scale>
+                        <uri>model://uuv_bluerov2_heavy_cam_gripper/meshes/Gripper.dae</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <script>
+                        <name>Gazebo/Grey</name>
+                        <uri>model://uuv_bluerov2_heavy_cam_gripper/meshes/prop.dae</uri>
+                    </script>
+                </material>
+            </visual>
+        </link>
+        <joint name="gripper_joint" type="fixed">
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                    <lower>-1e+16</lower>
+                    <upper>1e+16</upper>
+                </limit>
+            </axis>
+            <parent>base_link</parent>
+            <child>gripper</child>
+        </joint>
+
         <link name="pressure_sensor_link">
             <inertial>
                 <mass>0.001</mass>
