@@ -1,8 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
-    <model name="BlueROV2 Heavy with Camera">
-        <pose>0 0 0 0 0 0</pose>
-
+    <actor name="bluerov">
         <link name="base_link">
             <inertial>
                 <mass>12</mass>
@@ -921,5 +919,37 @@
             <parent>base_link</parent>
         </joint>
 
-    </model>
+        <script>
+            <loop>true</loop>
+            <delay_start>0.000000</delay_start>
+            <auto_start>true</auto_start>
+            <trajectory id="0" type="square">
+                <!-- HOCH UND RUNTER -->
+                <!-- <waypoint>
+                    <time>0.0</time>
+                    <pose>0.7 2.0 -0.1 0 0 1.57</pose>
+                </waypoint>
+                <waypoint>
+                    <time>5.0</time>
+                    <pose>0.7 2.0 -0.7 0 0 1.57</pose>
+                </waypoint>
+                <waypoint>
+                    <time>10.0</time>
+                    <pose>0.7 2.0 -0.1 0 0 1.57</pose>
+                </waypoint> -->
+                <waypoint>
+                    <time>0.0</time>
+                    <pose>0.85 2.0 -0.53 0 0 1.57</pose>
+                </waypoint>
+                <waypoint>
+                    <time>5.0</time>
+                    <pose>0.85 2.82 -0.53 0 0 1.57</pose>
+                </waypoint>
+                <waypoint>
+                    <time>10.0</time>
+                    <pose>0.85 2.0 -0.53 0 0 1.57</pose>
+                </waypoint>
+            </trajectory>
+        </script>
+    </actor>
 </sdf>
